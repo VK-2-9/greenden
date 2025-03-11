@@ -16,16 +16,16 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
   <body>
     <!--responsive navbar-->
     <nav
-      class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-50"
+      class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10"
     >
       <h1 class="text-2xl">Greenden</h1>
-      <svg
+      <svg id="menu-open" 
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        class="w-6 h-6 md:hidden"
+        class="w-6 h-6 md:hidden cursor-pointer"
       >
         <path
           stroke-linecap="round"
@@ -34,7 +34,7 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
         />
       </svg>
 
-      <ul class="flex gap-5 text-gray-600 hidden md:flex">
+      <ul class=" gap-5 text-gray-600 hidden md:flex">
         <li>
           <a href="./index.html" class="hover:underline hover:text-black"
             >Home</a
@@ -52,6 +52,33 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
         </li>
       </ul>
     </nav>
+
+    <!--Side navbar-->
+    <section id="side-nav" class=" bg-green-100 fixed z-20 top-0  w-1/2  h-full transition-all duration-1000 md:hidden" style="right: -50%;">
+      <div class="text-right p-5">
+      <p id="menu-close" class="cursor-pointer text-2xl font-bold">X</p>
+    </div>
+
+      <ul class="flex flex-col gap-10 text-black-600  text-center">
+        <li>
+          <a href="./index.html" class="hover:underline hover:text-black  "
+            >Home</a
+          >
+        </li>
+        <li>
+          <a href="./products.html" class="hover:underline hover:text-black"
+            >Products</a
+          >
+        </li>
+        <li>
+          <a href="./contact.html" class="hover:underline hover:text-black"
+            >Contact</a
+          >
+        </li>
+      </ul>
+      
+
+    </section>
     <!--header section-->
     <section class="bg-green-100 p-4 justify-center flex md:p-10">
       <div>
@@ -263,5 +290,7 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
       </p>
       <p>@ 2025 Greenday.com</p>
     </section>
+
+    <script src="./index.js"></script>
   </body>
 </html>
